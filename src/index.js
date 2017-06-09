@@ -3,10 +3,6 @@ import styles from './LoadingBar.css';
 
 class SimpleLoadingBar extends Component {
 
-    constructor(props, context) {
-        super(props, context);
-    };
-
     render() {
         return (
             <div className="simple__loading__container">
