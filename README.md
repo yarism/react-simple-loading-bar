@@ -4,7 +4,7 @@
 
 Inspired by react-redux-loading-bar but without the middleware. Handles simultaneous active requests.
 
-Including it:
+### Including it:
 ```javascript
 import SimpleLoadingBar from 'react-simple-loading-bar'
 
@@ -13,14 +13,14 @@ import SimpleLoadingBar from 'react-simple-loading-bar'
 
 This is my recommended way of using the loading bar. The important thing is that you need to set activeRequests to a value above 0 when you want to start the loading bar. Set it to 0 when you want the loading bar to finish.
 
-Set these in your state:
+### Set these in your state:
 ```javascript
 activeRequests: state.global.activeRequests,
 isInitiated: state.global.isInitiated
 ```
 
 
-Your actions:
+### Your actions:
 ```javascript
 const GlobalActions = {
 
@@ -41,7 +41,7 @@ export default GlobalActions;
 ```
 
 
-Your reducer:
+### Your reducer:
 ```javascript
 const initialState = {
     activeRequests: 0,
