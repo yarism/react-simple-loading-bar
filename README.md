@@ -78,5 +78,10 @@ export default GlobalReducer;
 <SimpleLoadingBar isInitiated={this.state.isInitiated} activeRequests={this.state.activeRequests} color={this.state.color}></SimpleLoadingBar>
 ```
 
+#### Set height:
+```
+<SimpleLoadingBar isInitiated={this.state.isInitiated} activeRequests={this.state.activeRequests} height={this.state.height}></SimpleLoadingBar>
+```
+
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.com/package/react-simple-loading-bar

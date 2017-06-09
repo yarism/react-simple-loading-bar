@@ -1,21 +1,21 @@
-.loading__container {
+.simple__loading__container {
   position: fixed;
   z-index: 9999;
   top: 0;
   left: 0;
   right: 0;
 }
-.loading__bar {
+.simple__loading__bar {
   float: left;
   height: 4px;
   background-color: #990ae3;
   width: 0;
   transition-timing-function: linear;
 }
-.loading__bar--start {
+.simple__loading__bar--start {
   animation: loader 30s;
 }
-.loading__bar--done {
+.simple__loading__bar--done {
   position: fixed;
   top: 0;
   left: 0;
@@ -58,7 +58,6 @@
   }
   80% {
     width: 100%;
-    margin-top: 0;
   }
   90% {
     width: 100%;

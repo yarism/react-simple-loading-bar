@@ -21,13 +21,13 @@ class Demo extends Component {
             this.setState({ activeRequests: 0 });
         }.bind(this), 1500);
         setTimeout(function() {
-            this.setState({ activeRequests: 1, color: '#51CE7E' });
+            this.setState({ activeRequests: 1, color: '#51CE7E', height: '6px' });
         }.bind(this), 5000);
         setTimeout(function() {
             this.setState({ activeRequests: 0 });
         }.bind(this), 7000);
         setTimeout(function() {
-            this.setState({ activeRequests: 3, color: '#ff5a5f' });
+            this.setState({ activeRequests: 3, color: '#ff5a5f', height: '2px' });
         }.bind(this), 10000);
         setTimeout(function() {
             this.setState({ activeRequests: 2 });
@@ -39,7 +39,7 @@ class Demo extends Component {
             this.setState({ activeRequests: 0 });
         }.bind(this), 14000);
         setTimeout(function() {
-            this.setState({ activeRequests: 1, color: '#f2b928' });
+            this.setState({ activeRequests: 1, color: '#f2b928', height: '4px' });
         }.bind(this), 17000);
         setTimeout(function() {
             this.setState({ activeRequests: 0 });
@@ -50,7 +50,7 @@ class Demo extends Component {
         return <div>
             <h1>react-simple-loading-bar</h1>
             <h2>Active Requests: {this.state.activeRequests}</h2>
-            <SimpleLoadingBar isInitiated={this.state.isInitiated} activeRequests={this.state.activeRequests} color={this.state.color}></SimpleLoadingBar>
+            <SimpleLoadingBar isInitiated={this.state.isInitiated} activeRequests={this.state.activeRequests} color={this.state.color} height={this.state.height}></SimpleLoadingBar>
         </div>
     }
 }
