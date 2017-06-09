@@ -1,6 +1,6 @@
 {
   "name": "react-simple-loading-bar",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "react-simple-loading-bar React component",
   "main": "lib/index.js",
   "module": "es/index.js",
