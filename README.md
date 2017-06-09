@@ -21,7 +21,7 @@ import SimpleLoadingBar from 'react-simple-loading-bar'
 <SimpleLoadingBar isInitiated={this.state.isInitiated} activeRequests={this.state.activeRequests}></SimpleLoadingBar>
 ```
 
-This is my recommended way of using the loading bar. The important thing is that you need to set activeRequests to a value above 0 when you want to start the loading bar. Set it to 0 when you want the loading bar to finish.
+This is my recommended way of using the loading bar (well, not mine, I read it somewhere but I can't remember the source). The important thing is that you need to set activeRequests to a value above 0 when you want to start the loading bar. Set it to 0 when you want the loading bar to finish.
 
 ## Set these in your state:
 ```javascript
