@@ -1,6 +1,6 @@
 {
   "name": "react-simple-loading-bar",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "react-simple-loading-bar React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -27,10 +27,13 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
-  "author": "",
+  "author": "Joakim Johansson",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
+  "repository" : { 
+    "type": "git", 
+    "url": "https://github.com/yarism/react-simple-loading-bar"
+  },
   "keywords": [
     "react-component"
   ]

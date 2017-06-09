@@ -6,55 +6,61 @@
 
 Inspired by react-redux-loading-bar but without the middleware. Handles simultaneous active requests.
 
-Recommended use with a global actions:
+Including it:
 
-<SimpleLoadingBar isInitiated={this.state.isInitiated} activeRequests={this.state.activeRequests}></SimpleLoadingBar>
+    import SimpleLoadingBar from 'react-simple-loading-bar'
+
+    <SimpleLoadingBar isInitiated={this.state.isInitiated} activeRequests={this.state.activeRequests}></SimpleLoadingBar>
+
+This is my recommended way of using the loading bar. The important thing is that you need to set activeRequests to a value above 0 when you want to start the loading bar. Set it to 0 when you want the loading bar to finish.
+
+Set these in your state:
+
+    isLoading: state.global.activeRequests,
+    isInitiated: state.global.isInitiated
 
 
 
-isLoading: state.global.isLoading,
-isInitiated: state.global.isInitiated
+Your actions:
 
+    const GlobalActions = {
 
+        isLoading: function () {
+            return {
+                type: 'IS_LOADING'
+            }
+        },
 
-
-const GlobalActions = {
-
-    isLoading: function () {
-        return {
-            type: 'IS_LOADING'
-        }
-    },
-
-    hasLoaded: function () {
-        return {
-            type: 'HAS_LOADED'
+        hasLoaded: function () {
+            return {
+                type: 'HAS_LOADED'
+            }
         }
     }
-}
 
-export default GlobalActions;
-
+    export default GlobalActions;
 
 
 
-const initialState = {
-    activeRequests: 0,
-    isInitiated: false
-}
+Your reducer:
 
-const GlobalReducer = function reducer(state = initialState, action) {
-    switch (action.type) {
-        case 'IS_LOADING':
-            return Object.assign({}, state, { activeRequests: state.activeRequests + 1, isInitiated: true });
-        case 'HAS_LOADED':
-            return Object.assign({}, state, { activeRequests: state.activeRequests - 1 });
-        default:
-            return state;
+    const initialState = {
+        activeRequests: 0,
+        isInitiated: false
     }
-};
 
-export default GlobalReducer;
+    const GlobalReducer = function reducer(state = initialState, action) {
+        switch (action.type) {
+            case 'IS_LOADING':
+                return Object.assign({}, state, { activeRequests: state.activeRequests + 1, isInitiated: true });
+            case 'HAS_LOADED':
+                return Object.assign({}, state, { activeRequests: state.activeRequests - 1 });
+            default:
+                return state;
+        }
+    };
+
+    export default GlobalReducer;
 
 
 
