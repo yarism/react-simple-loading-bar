@@ -30,7 +30,7 @@ isInitiated: state.global.isInitiated
 ```
 
 
-## Your actions:
+## Actions:
 ```javascript
 const GlobalActions = {
 
@@ -50,7 +50,7 @@ const GlobalActions = {
 export default GlobalActions;
 ```
 
-## Your reducer:
+## Reducer:
 ```javascript
 const initialState = {
     activeRequests: 0,
@@ -69,6 +69,13 @@ const GlobalReducer = function reducer(state = initialState, action) {
 };
 
 export default GlobalReducer;
+```
+
+## Settings:
+
+#### Set color:
+```
+<SimpleLoadingBar isInitiated={this.state.isInitiated} activeRequests={this.state.activeRequests} color={this.state.color}></SimpleLoadingBar>
 ```
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
