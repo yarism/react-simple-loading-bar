@@ -1,9 +1,20 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
+import styles from './LoadingBar.css';
 
-export default class extends Component {
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
+class SimpleLoadingBar extends Component {
+
+    constructor(props, context) {
+        super(props, context);
+    };
+
+    render() {
+        return (
+            <div className="loading__container">
+                <div className={'loading__bar ' + (this.props.isInitiated ? 'loading__bar--start ' : '') + (this.props.activeRequests === 0 ? 'loading__bar--done ' : '')}></div>
+            </div>
+        );
+    };
 }
+
+
+export default SimpleLoadingBar;

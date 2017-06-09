@@ -1,0 +1,75 @@
+.loading__container {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.loading__bar {
+  float: left;
+  height: 4px;
+  background-color: #990ae3;
+  width: 0;
+  transition-timing-function: linear;
+}
+.loading__bar--start {
+  animation: loader 30s;
+}
+.loading__bar--done {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation: loaderDone 1s;
+}
+
+@keyframes loader {
+  0% {
+    width: 0;
+  }
+  2% {
+    width: 40%;
+  }
+  5% {
+    width: 65%;
+  }
+  9% {
+    width: 80%;
+  }
+  15% {
+    width: 90%;
+  }
+  40% {
+    width: 95%;
+  }
+  60% {
+    width: 97%;
+  }
+  75% {
+    width: 98%;
+  }
+  99% {
+    width: 99%;
+  }
+}
+@keyframes loaderDone {
+  0% {
+    width: auto;
+  }
+  80% {
+    width: 100%;
+    margin-top: 0;
+  }
+  90% {
+    width: 100%;
+    margin-top: 0;
+  }
+  95% {
+    width: 100%;
+    margin-top: -2px;
+  }
+  100% {
+    width: 100%;
+    margin-top: -4px;
+  }
+}
