@@ -11,8 +11,6 @@
   background-color: #990ae3;
   width: 0;
   transition-timing-function: linear;
-}
-.simple__loading__bar--start {
   animation: loader 30s;
 }
 .simple__loading__bar--done {

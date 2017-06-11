@@ -18,15 +18,14 @@ npm install --save react-simple-loading-bar
 ```javascript
 import SimpleLoadingBar from 'react-simple-loading-bar'
 
-<SimpleLoadingBar isInitiated={this.state.isInitiated} activeRequests={this.state.activeRequests}></SimpleLoadingBar>
+<SimpleLoadingBar activeRequests={this.state.activeRequests}></SimpleLoadingBar>
 ```
 
 This is my recommended way of using the loading bar (well, not mine, I read it somewhere but I can't remember the source). The important thing is that you need to set activeRequests to a value above 0 when you want to start the loading bar. Set it to 0 when you want the loading bar to finish.
 
 ## Set these in your state:
 ```javascript
-activeRequests: state.global.activeRequests,
-isInitiated: state.global.isInitiated
+activeRequests: state.global.activeRequests
 ```
 
 
@@ -53,14 +52,13 @@ export default GlobalActions;
 ## Reducer:
 ```javascript
 const initialState = {
-    activeRequests: 0,
-    isInitiated: false
+    activeRequests: 0
 }
 
 const GlobalReducer = function reducer(state = initialState, action) {
     switch (action.type) {
         case 'IS_LOADING':
-            return Object.assign({}, state, { activeRequests: state.activeRequests + 1, isInitiated: true });
+            return Object.assign({}, state, { activeRequests: state.activeRequests + 1 });
         case 'HAS_LOADED':
             return Object.assign({}, state, { activeRequests: state.activeRequests - 1 });
         default:
@@ -75,12 +73,12 @@ export default GlobalReducer;
 
 #### Set color:
 ```
-<SimpleLoadingBar isInitiated={this.state.isInitiated} activeRequests={this.state.activeRequests} color={this.state.color}></SimpleLoadingBar>
+<SimpleLoadingBar activeRequests={this.state.activeRequests} color={this.state.color}></SimpleLoadingBar>
 ```
 
 #### Set height:
 ```
-<SimpleLoadingBar isInitiated={this.state.isInitiated} activeRequests={this.state.activeRequests} height={this.state.height}></SimpleLoadingBar>
+<SimpleLoadingBar activeRequests={this.state.activeRequests} height={this.state.height}></SimpleLoadingBar>
 ```
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square

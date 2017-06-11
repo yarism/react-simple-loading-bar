@@ -50,7 +50,7 @@ class Demo extends Component {
         return <div>
             <h1>react-simple-loading-bar</h1>
             <h2>Active Requests: {this.state.activeRequests}</h2>
-            <SimpleLoadingBar isInitiated={this.state.isInitiated} activeRequests={this.state.activeRequests} color={this.state.color} height={this.state.height}></SimpleLoadingBar>
+            <SimpleLoadingBar activeRequests={this.state.activeRequests} color={this.state.color} height={this.state.height}></SimpleLoadingBar>
         </div>
     }
 }
